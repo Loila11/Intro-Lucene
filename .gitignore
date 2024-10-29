@@ -29,5 +29,5 @@ bin/
 .DS_Store
 
 .idea/
-.target/
-.docs/
+/target/
+/docs/
