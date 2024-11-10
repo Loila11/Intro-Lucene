@@ -90,8 +90,10 @@ Judging will be done automatically using the following script:
 ```shell
 mvn package
 java -jar target/docsearch-1.0-SNAPSHOT.jar -index -directory <path to docs>
-java -jar target/docsearch-1.0-SNAPSHOT.jar -search -directory <path to docs> -query <keyword>
+java -jar target/docsearch-1.0-SNAPSHOT.jar -search -query <keyword>
 ```
+
+EDIT: Removed `-directory <path to docs>` from searcher
 
 Where `<path to docs>` will be replaced with the path to the folder containing all files to be indexed / searched, and
 `<keyword>` will be replaced with the word / sentence the program will search for.
