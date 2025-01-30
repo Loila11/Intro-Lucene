@@ -85,7 +85,7 @@ surname and `<givenName>` with your first name. For example, `502_Cena_John` is 
 
 ## Judging
 
-Judging will be done automatically using the following script:
+Judging will be done automatically using the following script for Java:
 
 ```shell
 mvn package
@@ -95,8 +95,16 @@ java -jar target/docsearch-1.0-SNAPSHOT.jar -search -query <keyword>
 
 EDIT: Removed `-directory <path to docs>` from searcher
 
+Or for Python:
+```shell
+pip install -r requirements.txt
+python main.py -index -directory <path to docs>
+python main.py -search -query <keyword>
+```
+
 Where `<path to docs>` will be replaced with the path to the folder containing all files to be indexed / searched, and
 `<keyword>` will be replaced with the word / sentence the program will search for.
 
 The output will be an ordered list of top 5 documents that contain the given phrase. Only the document names will be 
 printed, one on each line.
+
